@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhav Bhardwaj | Indie Game Studio & Stupid Rocket 3D</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        space: {
+                            900: '#07090e',
+                            800: '#0f141d',
+                            700: '#171f2c',
+                            600: '#232e42'
+                        },
+                        neon: {
+                            cyan: '#00f2fe',
+                            violet: '#8a2be2',
+                            amber: '#f59e0b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth subtle stars grid background */
+        .grid-bg {
+            background-size: 32px 32px;
+            background-image:
+                radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-space-900 text-slate-200 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-neon-cyan/20 selection:text-neon-cyan grid-bg">
+
+    <!-- Top Navigation Bar -->
+    <header class="w-full border-b border-space-700/60 backdrop-blur-md bg-space-900/80 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 text-lg">
+                    🚀
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-white tracking-tight leading-tight text-base sm:text-lg">Madhav Bhardwaj</span>
+                    <span class="text-xs text-slate-400 font-mono tracking-wider uppercase">Indie Game Studio</span>
+                </div>
+            </div>
+
+            <nav class="flex items-center space-x-4 sm:space-x-6 text-sm font-medium">
+                <a href="#games" class="text-slate-300 hover:text-neon-cyan transition-colors">Games</a>
+                <a href="#admob-verification" class="text-slate-300 hover:text-neon-cyan transition-colors hidden sm:inline-block">app-ads.txt</a>
+                <a href="#contact" class="px-3.5 py-1.5 rounded-lg bg-space-700/80 hover:bg-space-600 text-slate-100 border border-space-600/60 transition-all text-xs sm:text-sm">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 flex-1 w-full flex flex-col space-y-16 sm:space-y-24">
+
+        <!-- Hero Section -->
+        <section class="text-center space-y-6 pt-4 sm:pt-8 max-w-3xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-cyan-400 text-xs font-mono">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                Building arcade thrills for mobile devices
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight sm:leading-none">
+                Crafting Addictive, Fast-Paced <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">Mobile Games</span>
+            </h1>
+
+            <p class="text-slate-400 text-base sm:text-lg leading-relaxed font-normal">
+                Independent Android & iOS game developer focusing on physics-driven mechanics, endless obstacle loops, and clean arcade fun.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <a href="#games" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:opacity-95 transition-transform active:scale-95 text-sm sm:text-base">
+                    View Flagship Game
+                </a>
+                <a href="#contact" class="px-6 py-3 rounded-xl bg-space-800 hover:bg-space-700 text-slate-200 border border-space-600/70 font-medium transition-all text-sm sm:text-base">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Project: Stupid Rocket 3D -->
+        <section id="games" class="space-y-6 scroll-mt-24">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-space-700/60 pb-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Featured Game</h2>
+                    <p class="text-slate-400 text-sm mt-1">Our flagship release available on the Google Play Store.</p>
+                </div>
+                <span class="text-xs font-mono text-cyan-400 mt-2 sm:mt-0 px-2.5 py-1 rounded bg-space-800 border border-space-700 self-start sm:self-auto">Status: Live / Closed Testing</span>
+            </div>
+
+            <div class="bg-space-800/80 rounded-2xl border border-space-700/80 p-6 sm:p-8 backdrop-blur-sm shadow-2xl relative overflow-hidden group">
+                <!-- Ambient gradient glow -->
+                <div class="absolute -top-24 -right-24 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-500/15 transition-colors"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+                    <!-- Icon / Visual representation -->
+                    <div class="md:col-span-4 flex flex-col items-center justify-center">
+                        <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-3xl bg-gradient-to-br from-space-700 via-space-800 to-space-900 border-2 border-cyan-500/30 shadow-2xl flex flex-col items-center justify-center relative p-4 group-hover:border-cyan-400/60 transition-all">
+                            <span class="text-6xl sm:text-7xl select-none filter drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">🚀</span>
+                            <span class="absolute bottom-3 font-mono text-[11px] text-cyan-300/80 bg-space-900/90 px-2.5 py-0.5 rounded-full border border-space-600">Adaptive Icon Ready</span>
+                        </div>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="md:col-span-8 space-y-4">
+                        <div class="space-y-1">
+                            <span class="text-xs uppercase font-mono tracking-widest text-cyan-400">Android Arcade Game</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Stupid Rocket 3D</h3>
+                        </div>
+
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Navigate a relentless gauntlet of dynamic obstacles with precision physics. Master the one-touch thrust mechanics, unlock continuous rewards, and test your reflexes in the ultimate high-altitude survival test.
+                        </p>
+
+                        <!-- Key Features Pills -->
+                        <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                            <span class="px-3 py-1 rounded-md bg-space-700 text-slate-300 border border-space-600">Endless Mode</span>
+                            <span class="px-3 py-1 rounded-md bg-space-700 text-slate-300 border border-space-600">Rewarded Ads (AdMob)</span>
+                            <span class="px-3 py-1 rounded-md bg-space-700 text-slate-300 border border-space-600">60 FPS Smooth Physics</span>
+                            <span class="px-3 py-1 rounded-md bg-space-700 text-slate-300 border border-space-600">Google Play Games</span>
+                        </div>
+
+                        <div class="pt-4 flex flex-wrap items-center gap-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.zugar.daddy.stupid_rocket_3d" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-white text-slate-950 font-semibold hover:bg-slate-200 transition-colors text-sm shadow-md">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,14C20.4,13.1 20.4,11.7 18.81,10.8L16.81,9.68L14.4,12.1L16.81,15.12M14.4,12.1L4.54,2.24C4.69,2.2 4.84,2.18 5,2.18C5.69,2.18 6.36,2.56 6.81,2.82L15.3,7.67L14.4,12.1M14.4,12.1L15.3,16.53L6.81,21.38C6.36,21.64 5.69,22.02 5,22.02C4.84,22.02 4.69,22 4.54,21.96L14.4,12.1Z"/>
+                                </svg>
+                                <span>Get on Google Play</span>
+                            </a>
+                            <span class="text-xs text-slate-400 font-mono">Package: com.zugar.daddy.stupid_rocket_3d</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdMob / Authorized Digital Sellers (app-ads.txt) Section -->
+        <section id="admob-verification" class="space-y-4 scroll-mt-24">
+            <div class="border-b border-space-700/60 pb-3">
+                <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+                    <span>Developer Verification & AdMob Compliance</span>
+                    <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded">app-ads.txt</span>
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">
+                    This domain serves as the official developer root domain required for Google Play Console and Google AdMob authorized digital sellers verification.
+                </p>
+            </div>
+
+            <div class="bg-space-800/60 rounded-xl border border-space-700/70 p-5 space-y-3 font-mono text-xs">
+                <div class="flex items-center justify-between text-slate-300">
+                    <span class="text-slate-400">File Location:</span>
+                    <a href="/app-ads.txt" class="text-cyan-400 hover:underline hover:text-cyan-300 font-bold">/app-ads.txt (Direct Link)</a>
+                </div>
+                <div class="p-3 rounded-lg bg-space-900 border border-space-700 text-emerald-400 overflow-x-auto select-all font-mono">
+                    google.com, pub-8634092447153157, DIRECT, f08c47fec0942fa0
+                </div>
+                <p class="text-[11px] text-slate-400 font-sans">
+                    Status: Configured for publisher ID <code class="text-cyan-300 font-mono">pub-8634092447153157</code>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Developer Contact / Support Section -->
+        <section id="contact" class="space-y-4 scroll-mt-24">
+            <div class="border-b border-space-700/60 pb-3">
+                <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Support & Contact</h2>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">For game feedback, closed testing inquiries, and technical support.</p>
+            </div>
+
+            <div class="bg-space-800/40 rounded-xl border border-space-700/60 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="space-y-1">
+                    <div class="text-white font-medium text-base">Madhav GameDev Studio</div>
+                    <div class="text-slate-400 text-xs sm:text-sm">Lead Developer • Stupid Rocket 3D</div>
+                    <div class="text-cyan-400 text-xs font-mono">madhav.s.gamedev.studio@gmail.com</div>
+                </div>
+                <a href="mailto:madhav.s.gamedev.studio@gmail.com" class="px-5 py-2.5 rounded-lg bg-space-700 hover:bg-space-600 border border-space-600 text-white text-sm font-medium transition-colors">
+                    Send Email Inquiry
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-space-700/60 bg-space-900/90 py-8 text-xs text-slate-400">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © <span id="year">2026</span> Madhav Bhardwaj. All rights reserved.
+            </div>
+
+            <div class="flex items-center space-x-6">
+                <a href="/app-ads.txt" class="text-cyan-400 hover:underline font-mono">app-ads.txt</a>
+                <a href="#" class="hover:text-slate-200 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-200 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update footer copyright year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
